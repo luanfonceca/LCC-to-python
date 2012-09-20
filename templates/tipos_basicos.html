@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="well paper-pile slide-text">							
+		<!-- ** widget header ** -->
+		<div class="navbar navbar-heading">
+			<div class="navbar-inner">
+				<div class="container" style="width: auto;">
+					<a class="brand" href="#">Tipo básicos!</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="c-alert pillow-emboss">
+            <div class="alert-message info">
+                <a class="close" href="#"><i class="icon-large icon-remove-circle"></i></a>
+                <h4 class="alert-heading">
+                    Tipos Básicos
+                </h4>
+            </div>
+        </div>
+
+		<strong>
+			Se lembre, os ">>>" representam o shell,
+			tem que digitar lá brother.
+		</strong>
+
+<pre>
+>>> palavra = 'Fulano'
+>>> type(palavra)
+&#60;type 'str'>	
+
+<strong>** Conhece o Slice?!</strong>
+>>> palavra[:3] # as 3 primeiras letras
+'Ful'
+>>> palavra[3:] # as 3 últimas letras
+'ano'
+>>> palavra[::-1] # "Fulano" ao contrário
+'onaluF'
+
+<strong>** Use um for!</strong>
+>>> for letra in palavra:
+/...     print letra 
+F
+u
+l
+a
+n
+o
+
+<strong>** Codifcação ASCI?! pff/...</strong>
+>>> teste = 'blá, blé, blí'
+>>> teste # Sem cast de asci para unicode
+'bl\xc3\xa1, bl\xc3\xa9, bl\xc3\xad'
+>>> print teste # O print é inteligente suficiente para fazê-lo
+blá, blé, blí
+
+>>> flutuante = 5.9
+>>> type(flutuante)
+&#60;type 'float'>
+>>> print flutuante + 10 # Adição de Inteiro com Float
+15.9
+
+<strong>** E se somarmos nossa "palavra" com "flutuante"?</strong>
+>>> palavra + flutuante
+Traceback (most recent call last):
+  File "&#60;stdin>", line 1, in &#60;module>
+TypeError: cannot concatenate 'str' and 'float' objects
+
+<strong>Agora vamos criar arquivos de códigos em python :)
+crie um arquivo chamado: "digitar_algo.py"
+Encreva isso dentro dele:</strong>
+# coding: utf-8
+texto = raw_input(u"Digite algo: ")
+print u"Você digitou: %s" % texto
+
+<strong>No terminal, vá até o diretório onde você criou seu arquivo e digite:</strong>
+$ python digitar_algo.py
+
+<strong>** Dica:</strong>
+>>> palavra = "Fulano"
+>>> dir(palavra)
+['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+<strong>** TODOS os métodos dos objetos do tipo 'str', disponíveis da biblioteca padrão do Python!:</strong>
+
+<strong>Eae, deu certo?!
+Show! agora você já pode criar qualquer tipo de script em python,
+manipular imagens, arquivos, e qualquer outra coisa que você queira!</strong>
+
+</pre>
+
+		<div class="c-alert pillow-emboss">
+			<div class="alert-message error">
+				<a class="close" href="#"><i class="icon-large icon-remove-circle"></i></a>
+				<h4 class="alert-heading">Teste seus conhecimentos!</h4>
+				1- Crie um programa chamado "slug.py" que recebe um texto e retorna o apelido desse nome, ou seja: se for passado "Eu amo Python" deverá ser mostrado "eu_amo_python".
+				<br>
+				2- Crie um programa chamado "cpf_formatado.py" que solicita a digitação de um número de CPF no formato xxxxxxxxxxx e mostre formatado (xxx.xxx.xxx-xx).
+			</div>
+		</div>
+
+	</div>
+{% endblock content %}

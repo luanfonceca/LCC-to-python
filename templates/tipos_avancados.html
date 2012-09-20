@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="well paper-pile slide-text">                            
+        <!-- ** widget header ** -->
+        <div class="navbar navbar-heading">
+            <div class="navbar-inner">
+                <div class="container" style="width: auto;">
+                    <a class="brand" href="#">Tipo Avançados!</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="c-alert pillow-emboss">
+            <div class="alert-message info">
+                <a class="close" href="#"><i class="icon-large icon-remove-circle"></i></a>
+                <h4 class="alert-heading">
+                    Listas
+                </h4>
+            </div>
+        </div>
+<pre>
+<strong>** Famosa Lista, não vetor, a lista é muuuuuuuito(Over 9000) mais poderosa que um Array bobão.</strong>
+>>> lista = [1, 2, 3, 4, 5]
+>>> print lista
+[1, 2, 3, 4, 5]
+
+<strong>** Não precisamos criar TAD's para manipular isso, somos jovens!</strong>
+>>> lista[0]
+1
+<strong>** Viu, é possível indexar, utilizando o Slice.</strong>
+
+>>> lista[1:4]
+[2, 3, 4]
+<strong>** Com direito a intervalo e tudo, é o fraco.</strong>
+
+<strong>** E pode bulír, pode?</strong>
+>>> lista.append(3) # Adiciona ao final
+>>> print lista
+[1, 2, 3, 4, 5, 3]
+
+>>> lista.pop() # Remove o último
+3
+
+<strong>** Bora mais longe?!</strong>
+>>> lista.append([4, 5, 75])
+>>> print lista
+[1, 2, 3, 4, 5, [4, 5, 75]]
+
+<strong>** Passava o resto do dia, num passava?</strong>
+>>> lista.insert(0, 'texto')
+>>> print lista
+['texto', 1, 2, 3, 4, 5, [4, 5, 75]]
+
+<strong>** Ei, use o "for" ai homi.</strong>
+>>> for item in lista:
+        print item
+ 
+texto
+1
+2
+3
+4
+5
+[4, 5, 75]
+
+<strong>** Agora, pense como um Pythonista, como eu faço para inverter uma lista?!</strong>
+>>> lista.reverse() # Só isso?! Sério?! e eu querendo fazer um for com for dentro óia...
+>>> print lista
+[[4, 5, 75], 5, 4, 3, 2, 1, 'texto']
+
+<strong>** Pra encerrar esse pedaço:</strong>
+>>> dir(lista)
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__delslice__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getslice__', '__gt__', '__
+hash__', '__iadd__', '__imul__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__se
+tattr__', '__setitem__', '__setslice__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+<strong>** Quase num tem coisa pra mexer né?</strong>
+</pre>
+                                            
+                                            <div class="c-alert pillow-emboss">
+                                                <div class="alert-message info">
+                                                    <a class="close" href="#"><i class="icon-large icon-remove-circle"></i></a>
+                                                    <h4 class="alert-heading">
+                                                        Tuplas
+                                                    </h4>
+                                                </div>
+                                            </div>
+<pre>
+<strong>** Não sabe o que é uma Tupla?</strong>
+A tupla é uma seqüência, como a lista,
+porém ela é imutável, ou seja, criou já elvis.
+É caracterizada pelos parênteses "()".
+
+>>> tupla = (1, 3, 5, 7)
+>>> dir(tupla)
+['__add__', '__class__', '__contains__', '__delattr__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__i
+nit__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__'
+, 'count', 'index']
+>>> print tupla[0]
+1
+<strong>** Ela tem menos métodos né?! Mas saiba que é tão útil quanto a lista :)</strong>
+
+>>> tupla2 = (1, 3, 4, 5, 1)
+>>> tupla2.count(1)
+2 # Duas ocorrências do elemento 1, na tupla2
+<strong>** Num disse que era útil?!</strong>
+</pre>
+
+                                            <div class="c-alert pillow-emboss">
+                                                <div class="alert-message info">
+                                                    <a class="close" href="#"><i class="icon-large icon-remove-circle"></i></a>
+                                                    <h4 class="alert-heading">
+                                                        Grande Dicionário!
+                                                    </h4>
+                                                </div>
+                                            </div>
+<pre>
+<strong>** Você conhece o dict? não?!</strong>
+O Dicionário, é um dos tipos de dados mais legais existente no python, 
+e reza uma lenda que é uma das estruturas de dados mais rápidas também.
+Ele é caracterizado por ter uma chave e um valor
+algo como {'chave': valor}, onde a chave pode ser uma str ou um int ou um float...
+
+>>> {1: 'a'}
+{1: 'a'}
+>>> {[1, 2, 3]: 'a'}
+Traceback (most recent call last):
+  File "&#60;input>", line 1, in &#60;module> 
+TypeError: unhashable type: 'list' # Nem tudo são flores ;/
+>>> {2.3: 'a'}
+{2.3: 'a'}
+
+dicionario = {'a': 1, 'e': 2, 'u': 5}
+<strong>** Eita, faltou o "I", e agora como eu atualizo o dict?!</strong>
+dicionario.update({'i': 3}) # seems legit, update <=> atualizar
+>>> print dicionario
+{'a': 1, 'u': 5, 'e': 2, 'i': 3}
+</pre>
+
+    </div>
+{% endblock content %}

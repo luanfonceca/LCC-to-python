@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="well paper-pile slide-text">                            
+        <!-- ** widget header ** -->
+        <div class="navbar navbar-heading">
+            <div class="navbar-inner">
+                <div class="container" style="width: auto;">
+                    <a class="brand" href="#">Condições!</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="c-alert pillow-emboss">
+            <div class="alert-message info">
+                <a class="close" href="#"><i class="icon-large icon-remove-circle"></i></a>
+                <h4 class="alert-heading">
+                    Estruturas Condicionais
+                </h4>
+            </div>
+        </div>
+<pre>
+<strong>** Um simples "if".</strong>
+>>> if True:
+...     print "Verdade"
+...     
+É verdade
+
+<strong>** E se num for?</strong>
+>>> if not True:
+...     print "Mentira"
+... 
+>>> # Nada Acontece...
+
+<strong>** Usando variáveis</strong>
+>>> historia = True
+>>> if historia:
+...     print "Verdade"
+... 
+Verdade
+
+<strong>** Usando o None e negando</strong>
+>>> historia = None
+>>> if historia:
+...     print "Verdade"
+... elif not historia:
+...     print "Mentira"
+...     
+Mentira
+
+<strong>** O "not" é um Modificador, usado em expressões condicionais,
+ele permite "afirmar negações".
+
+O que em outras linguagens seria:</strong>
+if(!historia){
+echo("Mentira")
+}
+
+<strong>** Em Python se torna, muito mais legível...</strong>
+>>> if not historia:
+...     print "Mentira"
+
+<strong>** Existem outros, vamos combinar condições com listas!</strong>
+>>> qualquer = [1, 2, 3, 4, 5]
+>>> num = 4
+>>> if num in qualquer:
+...     print "Tem o 4 ae"
+... 
+Tem 4 ae
+
+<strong>** Usando a função "all()" para turbinar!</strong>
+boato = [True, True, False]
+>>> if all(boato): # Neste caso, tudo precisa ser verdade.
+...     print "Tudo Verdade"
+... else:
+...     print u"Alguém Mentiu"
+...     
+Alguem Mentiu
+
+<strong>** Havendo alguma condição verdadeira o "any()" returna True de tudo</strong>
+if any(boato):
+...     print u"Um já serve"
+...
+Um ja serve
+
+<strong>** Comparando valores</strong>
+>>> num = 10
+>>> if num is 10:
+...     print u"é 10 sim!"
+...     
+É 10 sim!
+
+
+>>> if num > 5 and num < 15:
+...     print u"%s está entre 5 e 15" % num
+...     
+10 está entre 5 e 15
+
+<strong>** Ao infinito e além!</strong>
+</pre>
+    </div>
+{% endblock content %}

@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="well paper-pile slide-text">                            
+    <!-- ** widget header ** -->
+    <div class="navbar navbar-heading">
+        <div class="navbar-inner">
+            <div class="container" style="width: auto;">
+                <a class="brand" href="#">POO!</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="c-alert pillow-emboss">
+        <div class="alert-message info">
+            <a class="close" href="#"><i class="icon-large icon-remove-circle"></i></a>
+            <h4 class="alert-heading">
+                Programação Orientada a Objetos
+            </h4>
+        </div>
+    </div>
+    
+<pre>
+<strong>** Vamos começar criando um arquivos chamado "classes.py".
+Dentro dele, escrava este código:</strong>
+# coding: utf-8
+
+class Retangulo(object):
+    """
+    Retangulo(base, altura, cor)
+    Classe criada para demonstrar o uso 
+    de orientação a objetos com Python!
+    """
+    
+    def __init__(self, base=0, altura=0, cor='Sem cor'):
+        self.base = base
+        self.altura = altura
+        self.cor = cor
+        print "Criando nova instância Quadrado"
+
+<strong>** Parabéns você acabou de criar sua primeira Classe em Python, 
+pra variar, algo muito complicado né?!</strong>
+
+<strong>** Agora abra o terminal do python no mesmo diretório que
+você criou seu arquivo de classes.
+Digite então:</strong>
+
+>>> import classes
+>>> r = classes.Retangulo(base=2, altura=3)
+Criando nova instância de Retangulo
+>>> r
+&#60;classes.Retangulo object at 0x10d80ce90>
+>>> r.cor
+'Sem cor'
+>>> r.cor = 'Azul'
+>>> r.cor
+'Azul'
+
+<strong>** Reveja tudo que fizemos...</strong>
+- Criamos uma Classe chamada Retangulo;
+- Criamos uma instância dela;
+- Utilizando o construtor padrão para setar a base e a altura;
+- Setando depois uma cor, pois nossa instância não tinha.
+
+<strong>** Vamos então adicionar alguns métodos :)
+Adicione o método area(), logo após do método __init__():</strong>
+def area(self):
+    return self.base * self.altura
+
+<strong>** Para testar, faça:</strong>
+>>> reload(classes)
+&#60;module 'classes' from 'classes.py'>
+>>> r = classes.Retangulo(base=2, altura=3, cor='Azul')
+Criando nova instância de Retangulo
+>>> r
+&#60;classes.Retangulo object at 0x10d80ce90>
+>>> r.area()
+6
+<strong>** Eae, o que achou?!</strong>
+</pre>
+        <div class="c-alert pillow-emboss">
+            <div class="alert-message error">
+                <a class="close" href="#"><i class="icon-large icon-remove-circle"></i></a>
+                <h4 class="alert-heading">Teste seus conhecimentos!</h4>
+                1- Implemente na classe Rentagulo o método para calcular o perímetro.
+                <br>
+                2- Crie uma classe Pessoa, com os atributos de nome, idade e sexo, dentro do arquivos de Classes.
+                <br>
+                3- Crie duas instâncias diferentes de Pessoa e implemente o método beijar(), onde receberá como argumento a instância da outra Pessoa, onde deverá ser mostrado na tela "Fulano beijou Fulana".
+            </div>
+        </div>
+
+    </div>
+{% endblock content %}
